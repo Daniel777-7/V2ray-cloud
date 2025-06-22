@@ -1,0 +1,19 @@
+name: Build V2Ray Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up V2Ray
+        run: |
+          sudo apt update
+          sudo apt install -y unzip curl
+          curl -LO https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+          unzip v2ray-linux-64.zip -d v2ray
+          chmod +x v2ray/v2ray v2ray/v2ctl
+          ./v2ray/v2ray -version
