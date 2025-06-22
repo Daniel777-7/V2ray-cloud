@@ -1,0 +1,23 @@
+{
+  "inbounds": [{
+    "port": 80,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{
+        "id": "e3a1f9f1-84a3-4d0a-91cb-0e1c1f39107b",
+        "flow": "xtls-rprx-vision"
+      }],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/daniel"
+      }
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {}
+  }]
+}
